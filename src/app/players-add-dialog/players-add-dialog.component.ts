@@ -34,16 +34,10 @@ export class PlayersAddDialogComponent implements OnInit {
     const defaults = this._service.settings;
     this.player = this.data ? (this.data as any).player : null;
 
-    (this.data as any) = {
-      name: 'test',
-      ep: 100,
-      gp: defaults.minGP,
-    }
-
     if (!this.player) {
       this.formGroup = this._builder.group({
-        name: 'test',
-        ep: 100,
+        name: '',
+        ep: 0,
         gp: defaults.minGP,
         description: '',
       });
