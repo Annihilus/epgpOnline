@@ -117,11 +117,10 @@ export class epgpService {
       updatedPlayers.push(updatedPlayer);
     }
 
-    const sortedPlayers = this.sortByPr(updatedPlayers);
+    // const sortedPlayers = this.sortByPr(updatedPlayers);
 
 
-    this.data.next([...this.data.getValue(), sortedPlayers]);
-    console.log(this.data.getValue());
+    this.data.next([...this.data.getValue(), updatedPlayers]);
   }
 
   public addPlayer(data: any, index: number) {
@@ -181,8 +180,6 @@ export class epgpService {
 
       updatedData.push([...array]);
     }
-
-    console.log(updatedData);
 
     this.data.next(updatedData);
   }
