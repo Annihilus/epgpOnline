@@ -35,6 +35,8 @@ export class AppComponent implements OnInit {
     this._service.data.subscribe(data => {
       this.data.next(data);
     });
+
+    console.log('UPDATE');
   }
 
   public openAddingPlayerModal(index: number) {

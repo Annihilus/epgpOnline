@@ -29,7 +29,6 @@ const ELEMENT_DATA: any[] = [
 @Injectable()
 export class epgpService {
 
-
   public set settings(params: settingsParams) {
     this._settings = params;
     this.updateData();
